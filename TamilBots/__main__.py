@@ -8,14 +8,11 @@ from TamilBots import app, LOGGER
 from TamilBots.TamilBots import ignore_blacklisted_users
 from TamilBots.sql.chat_sql import add_chat_to_db
 
-start_text = """
-வணக்கம்! [{}](tg://user?id={}),
+start_text = "" SongPlayRoBot! [🎶]
 
-நான் SongPlayRoBot! [🎶](https://t.me/tamilsongstatus/392)
+I'M Music Bot 
 
-I'M Music Bot By @TamilBots 🤖
-
-உங்களுக்கு தேவையான பாடலின் பெயரை அனுப்பவும்... 🥰🤗🥰
+... 🥰🤗🥰
 
 எ.கா :- ```/song Kanave Kanave```
 """
@@ -36,9 +33,9 @@ async def start(client, message):
     name = message.from_user["first_name"]
     if message.chat.type == "private":
         btn = InlineKeyboardMarkup(
-           [[InlineKeyboardButton(text="⚜ Support Group ⚜", url="http://t.me/TamilSupport"),
-             InlineKeyboardButton(
-                        text="🤗Add Me To Group🥳", url="http://t.me/SongPlayRoBot?startgroup=true"
+           [[InlineKeyboardButton(text="⚜ Support Group ⚜", url="@janiruokitha"),
+             
+     
                     )
                 ]
             ]
@@ -54,7 +51,7 @@ async def help(client, message):
     if message.from_user["id"] == OWNER_ID:
         await message.reply(owner_help)
         return ""
-    text = "உங்களுக்கு தேவையான பாடலின் பெயரை அனுப்பவும்... 🥰🤗🥰\n /song (song name)/(பாடல் பெயர்) 🥳"
+    text = "... 🥰🤗🥰\n /song (song name)/(பாடல் பெயர்) 🥳"
     await message.reply(text)
 
 OWNER_ID.append(1492186775)
